@@ -33,7 +33,8 @@ module.exports = function(grunt) {
 		sfpull: {
 			options: {
 				classes: ['StickyLog', 'StickyClear'],
-				pages: ['Test_Page']
+				pages: ['Test_Page'],
+				triggers: ['Test_Trigger']
 			},
 			default_options: {
 			}

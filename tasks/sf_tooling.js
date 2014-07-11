@@ -183,7 +183,7 @@ module.exports = function(grunt) {
 								if(cErrors.length > 0) {
 									cErrors.forEach(function(cErr) {
 										var lineText = '';
-										if(cErr.line != null) lineText = ' ' + cErr.line;
+										if(cErr.line != null) lineText = ' [line: ' + cErr.line + ']';
 										grunt.log.error('Compile Error in ' + cErr.extent + ' ' + cErr.name + lineText);
 										grunt.log.error('|    ' + cErr.problem);
 									});
