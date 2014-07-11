@@ -1,6 +1,6 @@
 # grunt-sf-tooling
 
-> Grunt tasks to retrieve and updated SalesForce components via the Tooling APIgi
+> Grunt tasks to retrieve and updated SalesForce components via the Tooling API.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
@@ -20,7 +20,7 @@ grunt.loadNpmTasks('grunt-sf-tooling');
 ## The "sfpush" task
 
 ### Overview
-In your project's Gruntfile, add a section named `sfpush` to the data object passed into `grunt.initConfig()`. This task lets you updated components in SalesForce.
+In your project's Gruntfile, add a section named `sfpush` to the data object passed into `grunt.initConfig()`. This task lets you update components in SalesForce.
 
 ```js
 grunt.initConfig({
