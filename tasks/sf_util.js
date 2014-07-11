@@ -129,7 +129,7 @@ module.exports = function(grunt) {
 	
 	// Metadata types
 	var types = {
-		'classes': {
+		classes: {
 			sObject: 'ApexClass',
 			container: 'ApexClassMember',
 			queryMap: {
@@ -141,6 +141,32 @@ module.exports = function(grunt) {
 			},
 			outputFolder: 'classes',
 			extension: '.cls'
+		},
+		triggers: {
+			sObject: 'ApexTrigger',
+			container: 'ApexTriggerMember',
+			queryMap: {
+				Id: 'id',
+				Name: 'name',
+				Body: null,
+				ApiVersion: 'apiVersion',
+				Status: 'status'
+			},
+			outputFolder: 'triggers',
+			extension: '.trigger'
+		},
+		pages: {
+			sObject: 'ApexPage',
+			container: 'ApexPageMember',
+			queryMap: {
+				Id: 'id',
+				Name: 'name',
+				Markup: null,
+				ApiVersion: 'apiVersion'
+			},
+			outputFolder: 'pages',
+			extension: '.page',
+			bodyField: 'Markup'
 		}
 	}
 	

@@ -20,6 +20,8 @@ module.exports = function(grunt) {
 		username: grunt.config.get('sf_username'),
 		password: grunt.config.get('sf_password'),
 		classes: [],
+		pages: [],
+		triggers: [],
 		workingFolder: './components/',
 		validate: false
 	};
@@ -275,7 +277,7 @@ module.exports = function(grunt) {
 						var writeCount = 0;
 						data.records.forEach(function(apexClass) {
 							var cmpFile = cmpOutFolder + apexClass.Name + cmp.metaInfo.extension;
-							grunt.file.write(cmpFile, apexClass.Body);
+							grunt.file.write(cmpFile, apexClass[cmp.metaInfo.bodyField || 'Body']);
 							
 							var cmpMetaFile = cmpOutFolder + apexClass.Name + '-meta.json';
 							var cmpMeta = {};
@@ -290,7 +292,8 @@ module.exports = function(grunt) {
 							writeCount++;
 						});
 						
-						grunt.log.ok('Downloaded ' + writeCount + ' ' + cmp.metaInfo.sObject + ' records');
+						if(writeCount > 0)
+							grunt.log.ok('Downloaded ' + writeCount + ' ' + cmp.metaInfo.sObject + ' records');
 						mapCb();
 						
 					});
