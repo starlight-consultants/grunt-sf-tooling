@@ -54,7 +54,7 @@ A string value that sets the SalesForce api version used.
 Type: `Array`
 Default value: `[]`
 
-A array that holds a list of Apex Classes to be pulled with the `sf_pull` task.
+An array that holds a list of Apex Classes to be saved.
 
 #### options.containerName
 Type: `String`
@@ -68,11 +68,23 @@ Default value: `'login.salesforce.com'`
 
 A string value that sets the server used to log into SalesForce.
 
+#### options.pages
+Type: `Array`
+Default value: `[]`
+
+An array that holds a list of Apex Pages to be saved.
+
 #### options.password
 Type: `String`
 Default value: `null`
 
 A string value that sets the password used to log into SalesForce. It can be set globally with the `sf_password` attribute.
+
+#### options.triggers
+Type: `Array`
+Default value: `[]`
+
+An array that holds a list of triggers to be saved.
 
 #### options.username
 Type: `String`
@@ -148,11 +160,23 @@ Default value: `'login.salesforce.com'`
 
 A string value that sets the server used to log into SalesForce.
 
+#### options.pages
+Type: `Array`
+Default value: `[]`
+
+An array that holds a list of Apex Pages to be downloaded.
+
 #### options.password
 Type: `String`
 Default value: `null`
 
 A string value that sets the password used to log into SalesForce. It can be set globally with the `sf_password` attribute.
+
+#### options.triggers
+Type: `Array`
+Default value: `[]`
+
+An array that holds a list of Apex Triggers to be downloaded.
 
 #### options.username
 Type: `String`
