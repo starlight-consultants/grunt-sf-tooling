@@ -1,6 +1,6 @@
 # grunt-sf-tooling
 
-> Grunt tasks to retrieve and updated SalesForce components via the Tooling API.
+> Grunt tasks to retrieve and update SalesForce components via the Tooling API.
 
 ## Getting Started
 This plugin requires Grunt `~0.4.5`
