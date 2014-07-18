@@ -27,6 +27,9 @@ module.exports = function(grunt) {
 		// Configuration to be run (and then tested).
 		sfpush: {
 			default_options: {
+				options: {
+					classes: ['StickyLog']
+				}
 			}
 		},
 		

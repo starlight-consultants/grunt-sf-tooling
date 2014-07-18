@@ -80,6 +80,19 @@ module.exports = function(grunt) {
 				async.map(grunt.file.expand(options.workingFolder + '**/*-meta.json'), function(metaFile, mapCb) {
 					var cmpMeta = grunt.file.readJSON(metaFile);
 					
+					// Verify the read component is part of this target
+					var isInTarget = false;
+					Object.keys(sf_util.types).forEach(function(key) {
+						if(isInTarget) return;
+						if(options[key].indexOf(cmpMeta.name) >= 0) {
+							isInTarget = true;
+						}
+					});
+					if(!isInTarget) {
+						mapCb();
+						return;
+					}
+					
 					// Verify the source code exists
 					var srcFile = /^(.*\/)(.*?)-meta\.json$/.exec(metaFile)[1] + cmpMeta.source;
 					if(!grunt.file.exists(srcFile)) {
